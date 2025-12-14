@@ -1,0 +1,17 @@
+services:
+  adventjs:
+    build:
+      context: .
+      args:
+        - UID=1000
+        - GID=1000
+    container_name: adventjs
+    ports:
+      - "8888:8888"
+    restart: no
+    volumes:
+      - .:/adventjs
+      - node_modules:/adventjs/node_modules
+
+volumes:
+  node_modules:
