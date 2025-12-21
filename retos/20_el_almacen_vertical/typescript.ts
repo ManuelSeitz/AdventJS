@@ -9,7 +9,7 @@ function dropGifts(warehouse: string[][], drops: number[]): string[][] {
 
     for (let y = warehouseCopy.length - 1; y >= 0; y--) {
       if (warehouseCopy[y][drop] === EMPTY) {
-        warehouseCopy[y][drop] = "#";
+        warehouseCopy[y][drop] = GIFT;
         break;
       }
     }
